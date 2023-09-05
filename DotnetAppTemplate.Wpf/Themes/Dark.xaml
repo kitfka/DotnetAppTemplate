@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="WindowBackgroundColorBrush">#1F1F1F</Color>
+    <Color x:Key="WindowTitleColor">white</Color>
+    <Color x:Key="HighlightColor">#414141</Color>
+    <Color x:Key="BlueColor">#FF007ACC</Color>
+    <Color x:Key="ForegroundColor">#FFF4F4F5</Color>
+    <Color x:Key="TextColor">White</Color>
+    <Color x:Key="ButtonColor">#353535</Color>
+    <Color x:Key="ToolBarBackgroundColor">#2C2C2C</Color>
+    <Color x:Key="BackgroundColor">#1F1F1F</Color>
+
+    <Thickness x:Key="WindowBorderSize">4</Thickness>
+    <Thickness x:Key="WindowBorderSizeMaximized">4</Thickness>
+
+    <SolidColorBrush x:Key="TextColorBrush" Color="{DynamicResource TextColor}"/>
+    <SolidColorBrush x:Key="ButtonColorBrush" Color="{DynamicResource ButtonColor}"/>
+    <SolidColorBrush x:Key="BackgroundColorBrush" Color="{DynamicResource BackgroundColor}" />
+    <SolidColorBrush x:Key="ToolBarBackgroundColorBrush" Color="{DynamicResource ToolBarBackgroundColor}" />
+    <SolidColorBrush x:Key="HighlightColorBrush" Color="{DynamicResource HighlightColor}" />
+</ResourceDictionary>

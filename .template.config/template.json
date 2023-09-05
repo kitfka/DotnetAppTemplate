@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Kitfka",
+  "classifications": [ "GUI" ],
+  "name": "My WPF template",
+  "identity": "Kitfka.GUI.CSharp",
+  "groupIdentity": "Kitfka.GUI",
+  "shortName": "GUI-FEY",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "DotnetAppTemplate",
+  "preferNameDirectory": true,
+  "symbols": {
+    "includecore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "This is needed for my mvvm sutup. This contains the Models and ViewModels that are plateform independent!",
+      "defaultValue": "true"
+    },
+
+    "wpf": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Adds a Windows only project.",
+      "defaultValue": "false"
+    },
+    "maui": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Add .net maui support.",
+      "defaultValue": "false"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!includecore)",
+          "exclude": [ "DotnetAppTemplate/**/*" ]
+        },
+        {
+          "condition": "(!wpf)",
+          "exclude": [ "DotnetAppTemplate.Wpf/**/*" ]
+        },
+        {
+          "condition": "(!maui)",
+          "exclude": [ "DotnetAppTemplate.Maui/**/*" ]
+        },
+        {
+          "exclude": [ ".git/**/*", ".vs/**/*" ]
+        }
+      ]
+    }
+  ]
+}

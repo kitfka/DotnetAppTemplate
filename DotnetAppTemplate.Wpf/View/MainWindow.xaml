@@ -1,0 +1,15 @@
+﻿<Window x:Class="DotnetAppTemplate.Wpf.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DotnetAppTemplate.Wpf.View" xmlns:viewmodel="clr-namespace:DotnetAppTemplate.ViewModel;assembly=DotnetAppTemplate" d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label Content="{Binding BindingText, FallbackValue='Fallback value for the editor!'}"/>
+            <Button x:Name="TestButton" Content="Durp" Click="TestButton_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

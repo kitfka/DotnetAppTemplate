@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DotnetAppTemplate.Maui.Views.SettingsPage"
+             xmlns:local="clr-namespace:DotnetAppTemplate.ViewModel;assembly=DotnetAppTemplate"
+             x:DataType="local:ConfigViewModel"
+             Title="SettingsPage">
+
+    <Shell.NavBarIsVisible>
+        <x:Boolean>True</x:Boolean>
+    </Shell.NavBarIsVisible>
+    
+             <!--x:DataType="local.core:MainViewModel"-->
+    <VerticalStackLayout>
+        <Label 
+            Text="Settings page!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Orientation="Horizontal">
+            <Switch x:Name="SwitchTest" OnColor="{DynamicResource Primary}" IsToggled="{Binding TestBool}" />
+            <Label VerticalOptions="Center" Text="Hey" />
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentPage>
