@@ -26,6 +26,12 @@
       "description": "Adds a Windows only project.",
       "defaultValue": "false"
     },
+    "blazorhybrid": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Adds 3 projects: Commen razor lib, asp net & maui. Projects use the same commen razor lib",
+      "defaultValue": "false"
+    },
     "maui": {
       "type": "parameter",
       "datatype": "bool",
@@ -47,6 +53,10 @@
         {
           "condition": "(!maui)",
           "exclude": [ "DotnetAppTemplate.Maui/**/*" ]
+        },
+        {
+          "condition": "(!blazorhybrid)",
+          "exclude": [ "DotnetAppTemplate.Web/**/*", "DotnetAppTemplate.WebCommon/**/*", "DotnetAppTemplate.MauiBlazor/**/*" ]
         },
         {
           "exclude": [ ".git/**/*", ".vs/**/*" ]
